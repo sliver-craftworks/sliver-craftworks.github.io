@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sliver-craftworks.github.io/outcomes-app//sitemap.xml
