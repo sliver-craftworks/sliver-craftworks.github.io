@@ -470,6 +470,7 @@ img {
 
 .screenshots-scroll {
     display: flex;
+    align-items: center;
     gap: 1.5rem;
     overflow-x: auto;
     padding: 1rem 0;
@@ -489,10 +490,25 @@ img {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+.screenshot-image.screenshot-landscape-image {
+    width: 630px;
+    max-width: calc(100vw - 3rem);
+}
+
 .screenshot-frame-image {
     border-radius: 0;
     box-shadow: none;
     filter: drop-shadow(0 1.25rem 2rem rgba(0, 0, 0, 0.22));
+}
+
+.screenshot-lightbox-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.screenshot-lightbox-image.screenshot-landscape-image {
+    width: auto;
+    max-height: 75vh;
 }
 
 /* Highlights Section */
@@ -841,6 +857,10 @@ img {
         width: 240px;
     }
 
+    .screenshot-image.screenshot-landscape-image {
+        width: 480px;
+    }
+
     .testimonial-card {
         width: 280px;
     }
@@ -997,6 +1017,10 @@ img {
 
 .screenshots-grid .screenshot-card {
     flex: none;
+}
+
+.screenshots-grid .screenshot-image.screenshot-landscape-image {
+    max-width: 100%;
 }
 
 /* Testimonials Layout Variants */
@@ -2059,13 +2083,6 @@ body[data-site-classes~="dark-mode"] .changelog-badge-removed {
     height: auto;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
-}
-
-@media (min-width: 768px) {
-    .blog-index-header {
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: var(--spacing-lg);
-    }
 }
 
 @media (min-width: 900px) {
