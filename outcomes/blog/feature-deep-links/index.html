@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="All tasks, outcomes, lists, and areas are deep link-able. Tapping Link → Copy from their respective menus copies a link to that item, e.g., outcomes://list/2DDE193F-D56A-4BC5-8693-03A5EE3A2747." />
     <meta name="author" content="Jeff" />
-    <meta name="generator" content="Ignite v0.6.0" />
+    <meta name="generator" content="Ignite v0.6.9" />
     <title>Feature: Deep links - Outcomes: Task planner for iPhone</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap-icons.min.css" rel="stylesheet" />
@@ -81,6 +81,12 @@
               </ul>
               <p>These links can be used outside of Outcomes (e.g., from Notes) to navigate directly to the specified item. They can also be used <a href="/outcomes/blog/feature-links">within Outcomes where URLs are supported</a>.</p>
             </div>
+            <script>(() => {
+    const documentURL = window.location.href.split('#')[0];
+    for (const link of document.querySelectorAll('.blog-article-body a[href^="#"]')) {
+        link.setAttribute('href', documentURL + link.getAttribute('href'));
+    }
+})();</script>
           </div>
         </div>
       </div>

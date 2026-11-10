@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Links are supported in Notes fields and list items. When links exist in a Notes field, tappable versions are shown below the notes. When a list item’s Notes field is a URL, the text is clickable. Choosing Paste link from the list item’s menu grab’s the destination’s title and uses it for the list item in addition to pasting the link in the Notes." />
     <meta name="author" content="Jeff" />
-    <meta name="generator" content="Ignite v0.6.0" />
+    <meta name="generator" content="Ignite v0.6.9" />
     <title>Feature: Links - Outcomes: Task planner for iPhone</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap-icons.min.css" rel="stylesheet" />
@@ -76,6 +76,12 @@
               <p>Links are supported in Notes fields and list items. When links exist in a Notes field, tappable versions are shown below the notes. When a list item’s Notes field is a URL, the text is clickable. Choosing <strong>Paste link</strong> from the list item’s menu grab’s the destination’s title and uses it for the list item in addition to pasting the link in the Notes.</p>
               <p><a href="/outcomes/blog/feature-deep-links">Deep links</a> to items in Outcomes are treated the same way.</p>
             </div>
+            <script>(() => {
+    const documentURL = window.location.href.split('#')[0];
+    for (const link of document.querySelectorAll('.blog-article-body a[href^="#"]')) {
+        link.setAttribute('href', documentURL + link.getAttribute('href'));
+    }
+})();</script>
           </div>
         </div>
       </div>

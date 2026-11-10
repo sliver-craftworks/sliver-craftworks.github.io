@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Rewrote onboarding so that the user can enter their own information and/or add the sample data." />
     <meta name="author" content="Jeff" />
-    <meta name="generator" content="Ignite v0.6.0" />
+    <meta name="generator" content="Ignite v0.6.9" />
     <title>Version 1.7.0 released - Outcomes: Task planner for iPhone</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap-icons.min.css" rel="stylesheet" />
@@ -75,6 +75,12 @@
             <div class="blog-article-body">
               <p>Rewrote onboarding so that the user can enter their own information and/or add the sample data.</p>
             </div>
+            <script>(() => {
+    const documentURL = window.location.href.split('#')[0];
+    for (const link of document.querySelectorAll('.blog-article-body a[href^="#"]')) {
+        link.setAttribute('href', documentURL + link.getAttribute('href'));
+    }
+})();</script>
           </div>
         </div>
       </div>

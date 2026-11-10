@@ -12,7 +12,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Jeff" />
-    <meta name="generator" content="Ignite v0.6.0" />
+    <meta name="generator" content="Ignite v0.6.9" />
     <title>Privacy Policy - Outcomes: Task planner for iPhone</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap-icons.min.css" rel="stylesheet" />
@@ -107,6 +107,13 @@
                   <li>Support: <a href="https://www.sliver.com/#contact">https://www.sliver.com/#contact</a></li>
                   <li>Website: <a href="https://www.sliver.com/outcomes">https://www.sliver.com/outcomes</a></li>
                 </ul>
+                <script>(() => {
+    const documentURL = window.location.href.split('#')[0];
+    const content = document.currentScript.parentElement;
+    for (const link of content.querySelectorAll('a[href^="#"]')) {
+        link.setAttribute('href', documentURL + link.getAttribute('href'));
+    }
+})();</script>
               </div>
             </div>
           </div>
